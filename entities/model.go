@@ -1,6 +1,6 @@
 package entities
 
-type Forcast struct {
+type Forecast struct {
 	ID          int32       `json:"id"`
 	CityName    string      `json:"name"`
 	Weather     []Weather   `json:"weather"`

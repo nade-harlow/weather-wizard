@@ -10,7 +10,7 @@ import (
 )
 
 func (f *Forecast) GetForecast(city string) {
-	response, err := http.Get(fmt.Sprintf("https://api.openweathermap.org/data/2.5/weather?q=%s&appid=%s", city, os.Getenv("APIKEY")))
+	response, err := http.Get(fmt.Sprintf("https://api.openweathermap.org/data/2.5/weather?q=%s&appid=%s&units=metric", city, os.Getenv("APIKEY")))
 	if err != nil {
 		log.Println("can't reach server, ", err.Error())
 		return
@@ -42,6 +42,6 @@ func (f Forecast) Print() {
 	fmt.Printf("City: 		%s\n", f.CityName)
 	fmt.Printf("Country: 	%v\n", f.Sys.Country)
 	fmt.Printf("Weather: 	%v (%s)\n", f.Weather[0].Main, f.Weather[0].Description)
-	fmt.Printf("Temperature: 	%vF\n", f.Temperature.Temp)
+	fmt.Printf("Temperature: 	%vC\n", f.Temperature.Temp)
 	fmt.Printf("Timezone: 	%v\n", f.Timezone)
 }

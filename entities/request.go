@@ -34,6 +34,10 @@ func (f *Forecast) New(forecast Forecast) {
 }
 
 func (f Forecast) Print() {
+	if f.CityName == "" {
+		log.Println("Error: Enter a city name")
+		return
+	}
 	fmt.Printf("%s %s's Weather Forecast %s\n", strings.Repeat("-", 20), f.CityName, strings.Repeat("-", 20))
 	fmt.Printf("City: %s\n", f.CityName)
 	fmt.Printf("Country: %v\n", f.Sys.Country)

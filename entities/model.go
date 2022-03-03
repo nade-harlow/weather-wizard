@@ -6,7 +6,7 @@ type Forecast struct {
 	Weather     []Weather   `json:"weather"`
 	Temperature Temperature `json:"main"`
 	Sys         System      `json:"sys"`
-	Timezone    int16       `json:"timezone"`
+	Timezone    int32       `json:"timezone"`
 }
 
 type Weather struct {

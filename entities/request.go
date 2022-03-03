@@ -39,9 +39,9 @@ func (f Forecast) Print() {
 		return
 	}
 	fmt.Printf("%s %s's Weather Forecast %s\n", strings.Repeat("-", 20), f.CityName, strings.Repeat("-", 20))
-	fmt.Printf("City: %s\n", f.CityName)
-	fmt.Printf("Country: %v\n", f.Sys.Country)
-	fmt.Printf("Weather: %v (%s)\n", f.Weather[0].Main, f.Weather[0].Description)
-	fmt.Printf("Temperature: %vF\n", f.Temperature.Temp)
-	fmt.Printf("Timezone: %v\n", f.Timezone)
+	fmt.Printf("City: 		%s\n", f.CityName)
+	fmt.Printf("Country: 	%v\n", f.Sys.Country)
+	fmt.Printf("Weather: 	%v (%s)\n", f.Weather[0].Main, f.Weather[0].Description)
+	fmt.Printf("Temperature: 	%vF\n", f.Temperature.Temp)
+	fmt.Printf("Timezone: 	%v\n", f.Timezone)
 }

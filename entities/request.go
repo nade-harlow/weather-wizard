@@ -22,6 +22,7 @@ func (f *Forecast) GetForecast(city string) {
 		return
 	}
 	f.New(w)
+	f.Print()
 }
 
 func (f *Forecast) New(forecast Forecast) {

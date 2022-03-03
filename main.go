@@ -13,6 +13,4 @@ func main() {
 	fmt.Print("Enter a city name: ")
 	fmt.Scan(&city)
 	f.GetForecast(city)
-	f.Print()
-
 }

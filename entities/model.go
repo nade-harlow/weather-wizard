@@ -10,7 +10,7 @@ type Forecast struct {
 }
 
 type Weather struct {
-	Id          int16  `json:"id"`
+	Id          int32  `json:"id"`
 	Main        string `json:"main"`
 	Description string `json:"description"`
 	Icon        string `json:"icon"`
